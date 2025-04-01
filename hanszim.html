@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hans Zimmer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background-color: #121212; color: #fff; }
+    .header { display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: rgba(255, 255, 255, 0.064); }
+    .header-left { display: flex; align-items: center; }
+    .header-left button { background: none; border: none; color: #666; cursor: pointer; font-size: 24px; margin-right: 15px; }
+    .header-left .artist-name { font-size: 20px; font-weight: bold; }
+    .main-content { padding: 30px; }
+    .artist-info { display: flex; align-items: center; margin-bottom: 30px; }
+    .artist-image { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-right: 30px; }
+    .artist-details h1 { font-size: 36px; margin-bottom: 10px; }
+    .artist-details p { font-size: 18px; color: #999; margin-bottom: 20px; }
+    .popular-songs, .liked-songs { margin-bottom: 30px; }
+    .popular-songs h2, .liked-songs h2 { font-size: 24px; margin-bottom: 20px; }
+    .song-list { list-style-type: none; }
+    .song-list li { display: flex; align-items: center; justify-content: space-between; padding: 10px; background-color: rgba(255, 255, 255, 0.1); border-radius: 5px; margin-bottom: 10px; }
+    .song-list li .song-info { display: flex; align-items: center; }
+    .song-list li .song-info img { width: 40px; height: 40px; border-radius: 5px; margin-right: 10px; }
+    .song-list li .song-info h3 { font-size: 16px; margin-bottom: 5px; }
+    .song-list li .song-info p { font-size: 14px; color: #999; }
+    .song-list li .song-duration { font-size: 14px; color: #999; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <button>←</button>
+      <div class="artist-name">Hans Zimmer</div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="artist-info">
+      <img src="https://i.scdn.co/image/ab6761610000e5eb371632043a8c12bb7eeeaf9d" alt="Hans Zimmer" class="artist-image">
+      <div class="artist-details">
+        <h1>Hans Zimmer</h1>
+        <p>15,824,693 monthly listeners</p>
+      </div>
+    </div>
+
+    <div class="popular-songs">
+      <h2>Popular</h2>
+      <ul class="song-list">
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273a883e26f90ab617c91b90e56" alt="Time">
+            <div>
+              <h3>Time</h3>
+              <p>Inception (Music from the Motion Picture)</p>
+            </div>
+          </div>
+          <div class="song-duration">4:35</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273ac29a65e7ffcfa6f9cb0d342" alt="Interstellar">
+            <div>
+              <h3>Cornfield Chase</h3>
+              <p>Interstellar (Original Motion Picture Soundtrack)</p>
+            </div>
+          </div>
+          <div class="song-duration">2:06</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273ac29a65e7ffcfa6f9cb0d342" alt="Interstellar">
+            <div>
+              <h3>No Time for Caution</h3>
+              <p>Interstellar (Original Motion Picture Soundtrack)</p>
+            </div>
+          </div>
+          <div class="song-duration">4:06</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b2738602dd298b8881fe56cd2b88" alt="Gladiator">
+            <div>
+              <h3>Now We Are Free</h3>
+              <p>Gladiator (Music from the Motion Picture)</p>
+            </div>
+          </div>
+          <div class="song-duration">4:14</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273d895d5ac649a922d194e809c" alt="Pirates">
+            <div>
+              <h3>He's a Pirate</h3>
+              <p>Pirates of the Caribbean: Dead Man's Chest</p>
+            </div>
+          </div>
+          <div class="song-duration">3:12</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="liked-songs">
+      <h2>Liked Songs</h2>
+      <p>You've liked 42 songs by Hans Zimmer</p>
+    </div>
+  </div>
+</body>
+</html>

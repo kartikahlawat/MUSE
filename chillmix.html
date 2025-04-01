@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS - Album by SZA</title>
+    <link rel="stylesheet" href="album.css">
+</head>
+<!-- Include Header Container -->
+<div id="header-container"></div>
+
+<script>
+    // Load the header dynamically in all pages
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-container").innerHTML = data;
+            });
+    });
+</script>
+
+<link rel="stylesheet" href="style.css">
+<body>
+    <div class="album-container">
+        <div class="album-header">
+            <img src="assets/chill2.png" alt="" class="album-cover">
+            <div class="favsongs">
+                <h1 class="album-title">Chill Mix</h1>
+                <p class="album-artist">Here's a smooth blend of laid-back tracks to help you unwind and vibe out. Sit back, relax, and enjoy the chill! 🎧✨ </p>
+            </div>
+        </div>
+        <ul class="tracklist">
+            <li class="track">
+                <span class="track-number">1.</span>
+                <span class="track-title">Dusk Till Dawn</span>
+                <p class="track-artist">Glass Animals</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">2.</span>
+                <span class="track-title">Yeh Shaam Mastani</span>
+                <p class="track-artist">Kishore Kumar</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">3.</span>
+                <span class="track-title">Shape of you</span>
+                <p class="track-artist">Ed sheeran</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">4.</span>
+                <span class="track-title">Neele Neele Ambar Par</span>
+                <p class="track-artist">Kalyanji-Anandji,Kishore Kumar</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">5.</span>
+                <span class="track-title">Kinni Kinni</span>
+                <p class="track-artist">Diljit Dosanjh</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">6.</span>
+                <span class="track-title">Ishq Bulaava</span>
+                <p class="track-artist">Vishal-Shekhar,Sanam Puri,Shipra Goyal</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">7.</span>
+                <span class="track-title">Aankhein Khuli</span>
+                <p class="track-artist">Lata Mangeshkar,Udit Narayana</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">8.</span>
+                <span class="track-title">Day One</span>
+                <p class="track-artist">Hans Zimmer</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">9.</span>
+                <span class="track-title">Born to Shine</span>
+                <p class="track-artist">Diljit Dosanjh</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">10.</span>
+                <span class="track-title">Kala Chasma</span>
+                <p class="track-artist">Prem & Hardeep,Neha Kakkar,Badshah</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">11.</span>
+                <span class="track-title">Deja Vu</span>
+                <p class="track-artist">Olivia Rodrigo</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">12.</span>
+                <span class="track-title">With You</span>
+                <p class="track-artist">AP Dhillon</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">13.</span>
+                <span class="track-title">Tujhko Jo Paaya</span>
+                <p class="track-artist">Mohit Chauhan,Pritam</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">14.</span>
+                <span class="track-title">Jashn-E-Bahaaraa</span>
+                <p class="track-artist">A.R Rahman,Javed Ali</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">15.</span>
+                <span class="track-title">Apna Bana Le</span>
+                <p class="track-artist">Arijit Singh, Sachin-Jigar</p>
+                <button class="play-button">▶️</button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

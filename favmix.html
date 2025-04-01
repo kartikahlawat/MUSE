@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS - Album by SZA</title>
+    <link rel="stylesheet" href="album.css">
+</head>
+<div id="header-container"></div>
+<!-- Include Header Container -->
+<div id="header-container"></div>
+
+<script>
+    // Load the header dynamically in all pages
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-container").innerHTML = data;
+            });
+    });
+</script>
+<!-- Link to style.css to maintain consistency -->
+<link rel="stylesheet" href="style.css">
+
+
+<body>
+    <div class="album-container">
+        <div class="album-header">
+            <img src="assets/favs.png" alt="" class="album-cover">
+            <div class="favsongs">
+                <h1 class="album-title">Favourites Mix</h1>
+                <p class="album-artist">Here's a mix of many songs that many different people like,Enjoy </p>
+            </div>
+        </div>
+        
+        <ul class="tracklist">
+            <li class="track">
+                <span class="track-number">1.</span>
+                <span class="track-title">Heat Waves</span>
+                <p class="track-artist">Glass Animals</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">2.</span>
+                <span class="track-title">STAY</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">3.</span>
+                <span class="track-title">Counting Stars</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">4.</span>
+                <span class="track-title">Levitating</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">5.</span>
+                <span class="track-title">Treat You Better</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">6.</span>
+                <span class="track-title">Proper Patola</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">7.</span>
+                <span class="track-title">Lamhey</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">8.</span>
+                <span class="track-title">Bahara</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">9.</span>
+                <span class="track-title">Sham</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">10.</span>
+                <span class="track-title">Pani Da Rang</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">11.</span>
+                <span class="track-title">Main Kya Karoon</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">12.</span>
+                <span class="track-title">With You</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">13.</span>
+                <span class="track-title">Summer High</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">14.</span>
+                <span class="track-title">Aise Kyun</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">15.</span>
+                <span class="track-title">Zehnaseeb</span>
+                <button class="play-button">▶️</button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

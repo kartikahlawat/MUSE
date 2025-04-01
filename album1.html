@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS - Album by SZA</title>
+    <link rel="stylesheet" href="album.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="album-container">
+        <div class="album-header">
+            <img src="assets/sza.jpg" alt="SOS" class="album-cover">
+            <div class="album-info">
+                <h1 class="album-title">SOS</h1>
+                <p class="album-artist">SZA</p>
+                <p class="album-details">2022 • RnB/Soul</p>
+            </div>
+        </div>
+
+        <ul class="tracklist">
+            <li class="track">
+                <span class="track-number">1.</span>
+                <span class="track-title">SOS</span>
+                <button class="play-button"
+                    onclick="playSong('assets/audio/sos.mp3', 'assets/sza.jpg', 'SOS', 'SZA')">▶</button>
+            </li>
+            <li class="track">
+                <span class="track-number">2.</span>
+                <span class="track-title">Kill Bill</span>
+                <button class="play-button"
+                    onclick="playSong('assets/audio/killbill.mp3', 'assets/sza.jpg', 'Kill Bill', 'SZA')">▶</button>
+            </li>
+            <li class="track">
+                <span class="track-number">3.</span>
+                <span class="track-title">Seek & Destroy</span>
+                <button class="play-button"
+                    onclick="playSong('assets/audio/seekdestroy.mp3', 'assets/sza.jpg', 'Seek & Destroy', 'SZA')">▶</button>
+            </li>
+            <li class="track">
+                <span class="track-number">4.</span>
+                <span class="track-title">Low</span>
+                <button class="play-button"
+                    onclick="playSong('assets/audio/low.mp3', 'assets/sza.jpg', 'Low', 'SZA')">▶</button>
+            </li>
+            <li class="track">
+                <span class="track-number">5.</span>
+                <span class="track-title">Love Language</span>
+                <button class="play-button"
+                    onclick="playSong('assets/audio/lovelanguage.mp3', 'assets/sza.jpg', 'Love Language', 'SZA')">▶</button>
+            </li>
+            <li class="track">
+                <span class="track-number">6.</span>
+                <span class="track-title">Blind</span>
+                <button class="play-button"
+                    onclick="playSong('assets/audio/blind.mp3', 'assets/sza.jpg', 'Blind', 'SZA')">▶</button>
+            </li>
+            <li class="track">
+                <span class="track-number">7.</span>
+                <span class="track-title">Used (feat. Don Toliver)</span>
+                <button class="play-button"
+                    onclick="playSong('assets/audio/used.mp3', 'assets/sza.jpg', 'Used', 'SZA feat. Don Toliver')">▶</button>
+            </li>
+            <li class="track">
+                <span class="track-number">8.</span>
+                <span class="track-title">Snooze</span>
+                <button class="play-button"
+                    onclick="playSong('assets/audio/snooze.mp3', 'assets/sza.jpg', 'Snooze', 'SZA')">▶</button>
+            </li>
+            <li class="track">
+                <span class="track-number">9.</span>
+                <span class="track-title">Notice Me</span>
+                <button class="play-button"
+                    onclick="playSong('assets/audio/noticeme.mp3', 'assets/sza.jpg', 'Notice Me', 'SZA')">▶</button>
+            </li>
+            <li class="track">
+                <span class="track-number">10.</span>
+                <span class="track-title">Gone Girl</span>
+                <button class="play-button"
+                    onclick="playSong('assets/audio/gonegirl.mp3', 'assets/sza.jpg', 'Gone Girl', 'SZA')">▶</button>
+            </li>
+        </ul>
+    </div>
+
+    <div id="player-container">
+        <iframe id="music-player-iframe" src="player.html" frameborder="0"></iframe>
+    </div>
+
+    <!-- JavaScript to Send Song Data -->
+    <script>
+        let playerIframe = null;
+
+        // ✅ Correct iframe load check
+        document.getElementById("music-player-iframe").onload = function () {
+            playerIframe = document.getElementById("music-player-iframe").contentWindow;
+            console.log("✅ Player iframe loaded successfully!");
+        };
+
+        // ✅ playSong() with retry if iframe not ready
+        function playSong(src, cover, title, artist) {
+            if (!playerIframe) {
+                console.warn("⏳ Player iframe not ready. Retrying in 100ms...");
+                setTimeout(() => playSong(src, cover, title, artist), 100);
+                return;
+            }
+
+            // ✅ Send message to iframe only if loaded
+            playerIframe.postMessage(
+                {
+                    action: "play",
+                    src: src,
+                    cover: cover,
+                    title: title,
+                    artist: artist,
+                },
+                "*"
+            );
+
+            console.log(`🎧 Now playing: ${title} by ${artist}`);
+        }
+    </script>
+
+    <!-- Inline CSS for Layout Fixes -->
+    <style>
+        /* General Page Style */
+        body {
+            margin: 0;
+            padding-bottom: 120px;
+            background-color: #121212;
+            color: white;
+        }
+
+        #player-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #181818;
+            z-index: 9999;
+        }
+
+        iframe#music-player-iframe {
+            width: 100%;
+            height: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .album-container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .tracklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .track {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .play-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .play-button:hover {
+            color: #1db954;
+            transform: scale(1.1);
+        }
+    </style>
+</body>
+
+</html>

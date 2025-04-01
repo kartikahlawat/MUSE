@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diljit Dosanjh</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background-color: #121212; color: #fff; }
+    .header { display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: rgba(255, 255, 255, 0.064); }
+    .header-left { display: flex; align-items: center; }
+    .header-left button { background: none; border: none; color: #666; cursor: pointer; font-size: 24px; margin-right: 15px; }
+    .header-left .artist-name { font-size: 20px; font-weight: bold; }
+    .main-content { padding: 30px; }
+    .artist-info { display: flex; align-items: center; margin-bottom: 30px; }
+    .artist-image { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-right: 30px; }
+    .artist-details h1 { font-size: 36px; margin-bottom: 10px; }
+    .artist-details p { font-size: 18px; color: #999; margin-bottom: 20px; }
+    .popular-songs, .liked-songs { margin-bottom: 30px; }
+    .popular-songs h2, .liked-songs h2 { font-size: 24px; margin-bottom: 20px; }
+    .song-list { list-style-type: none; }
+    .song-list li { display: flex; align-items: center; justify-content: space-between; padding: 10px; background-color: rgba(255, 255, 255, 0.1); border-radius: 5px; margin-bottom: 10px; }
+    .song-list li .song-info { display: flex; align-items: center; }
+    .song-list li .song-info img { width: 40px; height: 40px; border-radius: 5px; margin-right: 10px; }
+    .song-list li .song-info h3 { font-size: 16px; margin-bottom: 5px; }
+    .song-list li .song-info p { font-size: 14px; color: #999; }
+    .song-list li .song-duration { font-size: 14px; color: #999; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <button>←</button>
+      <div class="artist-name">Diljit Dosanjh</div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="artist-info">
+      <img src="https://i.scdn.co/image/ab6761610000e5ebfc043bea91ac91c222d235c9" alt="Diljit Dosanjh" class="artist-image">
+      <div class="artist-details">
+        <h1>Diljit Dosanjh</h1>
+        <p>9,856,234 monthly listeners</p>
+      </div>
+    </div>
+
+    <div class="popular-songs">
+      <h2>Popular</h2>
+      <ul class="song-list">
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273fb47bdcc34dd45740c7816d7" alt="Lover">
+            <div>
+              <h3>Lover</h3>
+              <p>GHOST</p>
+            </div>
+          </div>
+          <div class="song-duration">3:27</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtxsWwfhmHl6Z9bDifQVRFYPIByYtG7ZnjLg&s" alt="Kinni Kinni">
+            <div>
+              <h3>Kinni Kinni</h3>
+              <p>Drive Thru EP</p>
+            </div>
+          </div>
+          <div class="song-duration">2:58</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273ef759d4ae310020a06939e99" alt="Vibe">
+            <div>
+              <h3>Vibe</h3>
+              <p>Drive Thru EP</p>
+            </div>
+          </div>
+          <div class="song-duration">3:15</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273ef759d4ae310020a06939e99" alt="Elevated">
+            <div>
+              <h3>Elevated</h3>
+              <p>Drive Thru EP</p>
+            </div>
+          </div>
+          <div class="song-duration">3:02</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtxsWwfhmHl6Z9bDifQVRFYPIByYtG7ZnjLg&s" alt="GHOST">
+            <div>
+              <h3>GHOST</h3>
+              <p>GHOST</p>
+            </div>
+          </div>
+          <div class="song-duration">2:48</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="liked-songs">
+      <h2>Liked Songs</h2>
+      <p>You've liked 38 songs by Diljit Dosanjh</p>
+    </div>
+  </div>
+</body>
+</html>

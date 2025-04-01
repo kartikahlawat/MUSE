@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS - Album by SZA</title>
+    <link rel="stylesheet" href="album.css">
+</head>
+<div id="header-container"></div>
+
+<script>
+    // Load the header.html into all pages
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-container").innerHTML = data;
+            });
+    });
+</script>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div class="album-container">
+        <div class="album-header">
+            <img src="assets/new.png" alt="" class="album-cover">
+            <div class="favsongs">
+                <h1 class="album-title">New Music Mix</h1>
+                <p class="album-artist">Fresh tracks curated just for you. Discover the newest hits and hidden gems! </p>
+            </div>
+        </div>
+        
+        <ul class="tracklist">
+            <li class="track">
+                <span class="track-number">1.</span>
+                <span class="track-title">Perfect</span>
+                <p class="track-artist">Glass Animals</p>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">2.</span>
+                <span class="track-title">Ishq Bulaava</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">3.</span>
+                <span class="track-title">Dil Dhadakne Do</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">4.</span>
+                <span class="track-title">Naina</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">5.</span>
+                <span class="track-title">Khabar Nahi</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">6.</span>
+                <span class="track-title">Mere Bina</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">7.</span>
+                <span class="track-title">Shayad</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">8.</span>
+                <span class="track-title">Masakali</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">9.</span>
+                <span class="track-title">End of Beginning</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">10.</span>
+                <span class="track-title">Rang Jo Lagyo</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">11.</span>
+                <span class="track-title">Jeena Jeena </span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">12.</span>
+                <span class="track-title">Apna Bana le</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">13.</span>
+                <span class="track-title">Te Amo</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">14.</span>
+                <span class="track-title">Iktara</span>
+                <button class="play-button">▶️</button>
+            </li>
+            <li class="track">
+                <span class="track-number">15.</span>
+                <span class="track-title">Sooraj Dooba Hai</span>
+                <button class="play-button">▶️</button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

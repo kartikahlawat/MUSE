@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kishore Kumar</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background-color: #121212; color: #fff; }
+    .header { display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: rgba(255, 255, 255, 0.064); }
+    .header-left { display: flex; align-items: center; }
+    .header-left button { background: none; border: none; color: #666; cursor: pointer; font-size: 24px; margin-right: 15px; }
+    .header-left .artist-name { font-size: 20px; font-weight: bold; }
+    .main-content { padding: 30px; }
+    .artist-info { display: flex; align-items: center; margin-bottom: 30px; }
+    .artist-image { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-right: 30px; }
+    .artist-details h1 { font-size: 36px; margin-bottom: 10px; }
+    .artist-details p { font-size: 18px; color: #999; margin-bottom: 20px; }
+    .popular-songs, .liked-songs { margin-bottom: 30px; }
+    .popular-songs h2, .liked-songs h2 { font-size: 24px; margin-bottom: 20px; }
+    .song-list { list-style-type: none; }
+    .song-list li { display: flex; align-items: center; justify-content: space-between; padding: 10px; background-color: rgba(255, 255, 255, 0.1); border-radius: 5px; margin-bottom: 10px; }
+    .song-list li .song-info { display: flex; align-items: center; }
+    .song-list li .song-info img { width: 40px; height: 40px; border-radius: 5px; margin-right: 10px; }
+    .song-list li .song-info h3 { font-size: 16px; margin-bottom: 5px; }
+    .song-list li .song-info p { font-size: 14px; color: #999; }
+    .song-list li .song-duration { font-size: 14px; color: #999; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <button>←</button>
+      <div class="artist-name">Kishore Kumar</div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="artist-info">
+      <img src="https://i.scdn.co/image/ab6761610000e5ebc9ac92d87de28795c1c49730" alt="Kishore Kumar" class="artist-image">
+      <div class="artist-details">
+        <h1>Kishore Kumar</h1>
+        <p>15,234,789 monthly listeners</p>
+      </div>
+    </div>
+
+    <div class="popular-songs">
+      <h2>Popular</h2>
+      <ul class="song-list">
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d00001e02440a912f46eb34826b811f41" alt="Mere Sapnon Ki Rani">
+            <div>
+              <h3>Mere Sapnon Ki Rani</h3>
+              <p>From 'Aradhana'</p>
+            </div>
+          </div>
+          <div class="song-duration">5:45</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR81Gwe3N8SE1M12pGD3puALrmn1KE4KG-Z0A&s" alt="Pal Pal Dil Ke Paas">
+            <div>
+              <h3>Pal Pal Dil Ke Paas</h3>
+              <p>From 'Blackmail'</p>
+            </div>
+          </div>
+          <div class="song-duration">4:48</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273767bcd5db2f78007cfbe56f7" alt="Yeh Shaam Mastani">
+            <div>
+              <h3>Yeh Shaam Mastani</h3>
+              <p>From 'Kati Patang'</p>
+            </div>
+          </div>
+          <div class="song-duration">5:12</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273c2f9bfa7a2bcf729a4e39d1a" alt="O Mere Dil Ke Chain">
+            <div>
+              <h3>O Mere Dil Ke Chain</h3>
+              <p>From 'Mere Jeevan Saathi'</p>
+            </div>
+          </div>
+          <div class="song-duration">4:35</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b2733aff7bd51afcbcd415889680" alt="Roop Tera Mastana">
+            <div>
+              <h3>Roop Tera Mastana</h3>
+              <p>From 'Aradhana'</p>
+            </div>
+          </div>
+          <div class="song-duration">3:45</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="liked-songs">
+      <h2>Liked Songs</h2>
+      <p>You've liked 45 songs by Kishore Kumar</p>
+    </div>
+  </div>
+</body>
+</html>

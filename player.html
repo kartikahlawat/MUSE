@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="music-player">
+        <div class="album">
+            <img src="assets/images/hotelcalifornia.jpeg" alt="Album Cover" width="80" height="80" id="album-cover">
+            <div class="name">
+                <p class="firstword" id="song-title">&nbsp;&nbsp;Hotel California</p>
+                <p class="secondword" id="song-artist">Eagles</p>
+            </div>
+        </div>
+
+        <div class="player">
+            <div class="player-controls">
+                <i id="prev" class="fa-solid fa-backward-step"></i>
+                <i id="playPauseBtn" class="fa-regular fa-circle-play" style="font-size: 2rem;"></i>
+                <i id="next" class="fa-solid fa-forward-step"></i>
+            </div>
+
+            <div class="playback-bar">
+                <span class="curr-time" id="curr-time">00:00&nbsp;</span>
+                <input type="range" id="progress-bar" min="0" max="100" value="0">
+                <span class="to-time" id="to-time">&nbsp;-</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="assets/pngegg.png" alt="Volume Icon" style="height: 25px; width: 25px;">
+            <input type="range" id="volume-bar" min="0" max="100" value="80">
+        </div>
+    </div>
+
+    <audio id="audio-player" preload="metadata"></audio>
+
+    <script>
+        const audioPlayer = document.getElementById("audio-player");
+        const playPauseBtn = document.getElementById("playPauseBtn");
+        const songTitle = document.getElementById("song-title");
+        const songArtist = document.getElementById("song-artist");
+        const albumCover = document.getElementById("album-cover");
+        const progressBar = document.getElementById("progress-bar");
+        const currTime = document.getElementById("curr-time");
+        const toTime = document.getElementById("to-time");
+
+        let isPlaying = false;
+
+        // ✅ Receive messages from album.html
+        window.addEventListener("message", (event) => {
+            console.log("📩 Message received:", event.data);
+            if (event.data.action === "play") {
+                loadAndPlaySong(event.data);
+            }
+        });
+
+        // ✅ Load & Play Song
+        function loadAndPlaySong(song) {
+            audioPlayer.src = song.file;
+            songTitle.innerHTML = `&nbsp;&nbsp;${song.title}`;
+            songArtist.textContent = song.artist;
+            albumCover.src = song.cover;
+
+            audioPlayer.onloadedmetadata = () => {
+                toTime.textContent = formatTime(audioPlayer.duration);
+                playAudio();
+            };
+        }
+
+        function playAudio() {
+            audioPlayer.play();
+            isPlaying = true;
+            updatePlayPauseButton(true);
+        }
+
+        function togglePlayPause() {
+            if (isPlaying) {
+                audioPlayer.pause();
+                updatePlayPauseButton(false);
+            } else {
+                audioPlayer.play();
+                updatePlayPauseButton(true);
+            }
+            isPlaying = !isPlaying;
+        }
+
+        function updatePlayPauseButton(isPlaying) {
+            if (isPlaying) {
+                playPauseBtn.classList.remove("fa-circle-play");
+                playPauseBtn.classList.add("fa-circle-pause");
+            } else {
+                playPauseBtn.classList.remove("fa-circle-pause");
+                playPauseBtn.classList.add("fa-circle-play");
+            }
+        }
+
+        function formatTime(time) {
+            const minutes = Math.floor(time / 60);
+            const seconds = Math.floor(time % 60);
+            return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+        }
+
+        audioPlayer.addEventListener("timeupdate", () => {
+            if (!isNaN(audioPlayer.duration)) {
+                const currentTime = audioPlayer.currentTime;
+                progressBar.value = (currentTime / audioPlayer.duration) * 100;
+                currTime.textContent = formatTime(currentTime);
+            }
+        });
+
+        progressBar.addEventListener("input", (event) => {
+            audioPlayer.currentTime = (event.target.value / 100) * audioPlayer.duration;
+        });
+
+        playPauseBtn.addEventListener("click", togglePlayPause);
+    </script>
+</body>
+
+</html>

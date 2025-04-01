@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olivia Rodrigo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background-color: #121212; color: #fff; }
+    .header { display: flex; align-items: center; justify-content: space-between; padding: 20px; background-color: rgba(255, 255, 255, 0.064); }
+    .header-left { display: flex; align-items: center; }
+    .header-left button { background: none; border: none; color: #666; cursor: pointer; font-size: 24px; margin-right: 15px; }
+    .header-left .artist-name { font-size: 20px; font-weight: bold; }
+    .main-content { padding: 30px; }
+    .artist-info { display: flex; align-items: center; margin-bottom: 30px; }
+    .artist-image { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-right: 30px; }
+    .artist-details h1 { font-size: 36px; margin-bottom: 10px; }
+    .artist-details p { font-size: 18px; color: #999; margin-bottom: 20px; }
+    .popular-songs, .liked-songs { margin-bottom: 30px; }
+    .popular-songs h2, .liked-songs h2 { font-size: 24px; margin-bottom: 20px; }
+    .song-list { list-style-type: none; }
+    .song-list li { display: flex; align-items: center; justify-content: space-between; padding: 10px; background-color: rgba(255, 255, 255, 0.1); border-radius: 5px; margin-bottom: 10px; }
+    .song-list li .song-info { display: flex; align-items: center; }
+    .song-list li .song-info img { width: 40px; height: 40px; border-radius: 5px; margin-right: 10px; }
+    .song-list li .song-info h3 { font-size: 16px; margin-bottom: 5px; }
+    .song-list li .song-info p { font-size: 14px; color: #999; }
+    .song-list li .song-duration { font-size: 14px; color: #999; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">
+      <button>←</button>
+      <div class="artist-name">Olivia Rodrigo</div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="artist-info">
+      <img src="https://i.scdn.co/image/ab6761610000e5ebe03a98785f3658f0b6461ec4" alt="Olivia Rodrigo" class="artist-image">
+      <div class="artist-details">
+        <h1>Olivia Rodrigo</h1>
+        <p>82,456,789 monthly listeners</p>
+      </div>
+    </div>
+
+    <div class="popular-songs">
+      <h2>Popular</h2>
+      <ul class="song-list">
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273e85259a1cae29a8d91f2093d" alt="vampire">
+            <div>
+              <h3>vampire</h3>
+              <p>GUTS</p>
+            </div>
+          </div>
+          <div class="song-duration">3:39</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273a91c10fe9472d9bd89802e5a" alt="bad idea right?">
+            <div>
+              <h3>bad idea right?</h3>
+              <p>GUTS</p>
+            </div>
+          </div>
+          <div class="song-duration">2:41</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273a91c10fe9472d9bd89802e5a" alt="get him back!">
+            <div>
+              <h3>get him back!</h3>
+              <p>GUTS</p>
+            </div>
+          </div>
+          <div class="song-duration">2:55</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273a91c10fe9472d9bd89802e5a" alt="all-american bitch">
+            <div>
+              <h3>all-american bitch</h3>
+              <p>GUTS</p>
+            </div>
+          </div>
+          <div class="song-duration">2:46</div>
+        </li>
+        <li>
+          <div class="song-info">
+            <img src="https://i.scdn.co/image/ab67616d0000b273a91c10fe9472d9bd89802e5a" alt="drivers license">
+            <div>
+              <h3>drivers license</h3>
+              <p>SOUR</p>
+            </div>
+          </div>
+          <div class="song-duration">4:02</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="liked-songs">
+      <h2>Liked Songs</h2>
+      <p>You've liked 18 songs by Olivia Rodrigo</p>
+    </div>
+  </div>
+</body>
+</html>
